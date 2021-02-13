@@ -67,7 +67,7 @@ public class CCuenta {
         setSaldo(getSaldo() - cantidad);
     }
 
-    /** Obteniene el nombre de la cuenta.
+    /** Obtiene el nombre de la cuenta.
      * 
      * @return El nombre de la cuenta.
      */
@@ -83,7 +83,7 @@ public class CCuenta {
         this.nombre = nombre;
     }
 
-    /** Obteniene el código IBAN de la cuenta.
+    /** Obtiene el código IBAN de la cuenta.
      * @return la cuenta o el código IBAN de la cuenta.
      */
     public String getCuenta() {
@@ -112,7 +112,7 @@ public class CCuenta {
     }
 
     /**
-     * Obtén el tipo de interés de la cuenta.
+     * Obtiene el tipo de interés de la cuenta.
      * @return El tipo de interés.
      */
     public double getTipoInterés() {

@@ -1,17 +1,30 @@
 package cuentas;
 
+/**
+ * Esta clase se encarga de la gestión de una cuenta corrienta.
+ * @author jraic
+ */
 public class CCuenta {
-
 
     private String nombre;
     private String cuenta;
     private double saldo;
     private double tipoInterés;
 
+    /**
+     * Constructor por defecto.
+     */
     public CCuenta()
     {
     }
 
+    /**
+     * Constructor 
+     * @param nom El nombre de la cuenta.
+     * @param cue El código IBAN de la cuenta.
+     * @param sal El saldo de la cuenta.
+     * @param tipo El tipo de interés que tiene la cuenta.
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -19,11 +32,20 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     * Comprueba el saldo de la cuenta.
+     * @return el saldo.
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     * Adiciona saldo a la cuenta.
+     * @param cantidad La cantidad a adicionar al saldo de la cuenta.
+     * @throws Exception En caso de que la cantidad indicada sea negativa.
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -31,6 +53,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     * Resta saldo de la cuenta.
+     * @param cantidad La cantidad a restar del saldo de la cuenta.
+     * @throws Exception En caso de que la cantidad indicada sea negativa.
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
@@ -40,57 +67,61 @@ public class CCuenta {
         setSaldo(getSaldo() - cantidad);
     }
 
-    /**
-     * @return the nombre
+    /** Obteniene el nombre de la cuenta.
+     * 
+     * @return El nombre de la cuenta.
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * @param nombre the nombre to set
+     * Cambia el nombre de la cuenta.
+     * @param nombre El nuevo nombre.
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    /**
-     * @return the cuenta
+    /** Obteniene el código IBAN de la cuenta.
+     * @return la cuenta o el código IBAN de la cuenta.
      */
     public String getCuenta() {
         return cuenta;
     }
 
-    /**
-     * @param cuenta the cuenta to set
+    /** Cambia el código IBAN de la cuenta.
+     * @param cuenta El nuevo código.
      */
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
 
-    /**
-     * @return the saldo
+    /** Obtiene el saldo de la cuenta.
+     * @return El saldo de la cuenta.
      */
     public double getSaldo() {
         return saldo;
     }
 
-    /**
-     * @param saldo the saldo to set
+    /** Cambia el saldo de la cuenta.
+     * @param saldo El nuevo saldo.
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     /**
-     * @return the tipoInterés
+     * Obtén el tipo de interés de la cuenta.
+     * @return El tipo de interés.
      */
     public double getTipoInterés() {
         return tipoInterés;
     }
 
     /**
-     * @param tipoInterés the tipoInterés to set
+     * Cambia el tipo de interés de la cuenta.
+     * @param tipoInterés el nuevo tipo de interés.
      */
     public void setTipoInterés(double tipoInterés) {
         this.tipoInterés = tipoInterés;
